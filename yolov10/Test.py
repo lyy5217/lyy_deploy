@@ -8,6 +8,7 @@ def load_classes():
         class_list = [cname.strip() for cname in f.readlines()]
     return class_list
 
+
 def format_yolov10(frame):
     row, col, _ = frame.shape
     _max = max(col, row)
@@ -55,6 +56,6 @@ for row in cvOut[0, :, :]:
                 (int(left) - 10, int(top) - 5), cv.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2, 8);
 
 cv.imshow('YOLOv10 Object Detection', frame)
-cv.imwrite("D:/result.png", frame)
+cv.imwrite("result.png", frame)
 cv.waitKey(0)
 cv.destroyAllWindows()

@@ -73,7 +73,6 @@ def run():
                            (int(left) - 10, int(top) - 5), cv.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2, 8);
 
         cv.imshow('YOLOv10 Object Detection', frame)
-        cv.imwrite("D:/result.png", frame)
         # 按下 'q' 键退出循环
         if cv.waitKey(1) & 0xFF == ord('q'):
             break
